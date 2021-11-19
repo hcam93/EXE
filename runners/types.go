@@ -5,16 +5,16 @@ type Runner interface {
 }
 
 var supportedLanguages = map[string]Runner{
-	"python": &languageTemplate{
+	"python": &runnerGen{
 		langCommand: "python3",
 		className:   "PythonRunner.py",
-		headerCode:  []string{"numpy.py \n"},
-		footerCode:  []string{},
+		headerCode:  "numpy.py \n",
+		footerCode:  "",
 	},
-	"java": &languageTemplate{
+	"java": &runnerGen{
 		langCommand: "java",
 		className:   "javaRunner.java",
-		headerCode:  []string{"import java.util.*;\n", "import java.lang.*;\n", "public class JavaRunner{\n"},
-		footerCode:  []string{"\n}"},
+		headerCode:  "import java.util.*;\nimport java.lang.*;\npublic class JavaRunner{\n",
+		footerCode:  "\n}",
 	},
 }
