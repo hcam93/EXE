@@ -8,7 +8,7 @@ var supportedLanguages = map[string]Runner{
 	"python": &runnerGen{
 		langCommand: "python3",
 		className:   "PythonRunner.py",
-		headerCode:  "numpy.py \n",
+		headerCode:  "import numpy \n",
 		footerCode:  "",
 	},
 	"java": &runnerGen{
